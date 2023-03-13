@@ -18,13 +18,25 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <img src="{{ Vite::asset('resources/img/laravel.png') }}" alt="">
 
-                                <h1 class="card-title">Laravel 9 + Bootstrap Template</h1>
+                                <h1 class="card-title"> Movies </h1>
                             </div>
                         </div>
 
                     </div>
+                </div>
+                <div class="row">
+                    @foreach ($movies as $movie)
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>
+                                    {{ $movie -> title }}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </main>
